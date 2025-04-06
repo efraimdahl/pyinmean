@@ -3,6 +3,7 @@ name: Publish to PyPI
 on:
   push:
     branches:
+      - main
       - release  # Trigger on push to any release branch, for example release/v1.0
 
 jobs:
