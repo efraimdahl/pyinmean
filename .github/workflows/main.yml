@@ -7,7 +7,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
       - name: Checkout code
@@ -16,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'  # You can change this to your required Python version
+          python-version: '3.11'  # You can change this to your required Python version
 
       - name: Install dependencies
         run: |
@@ -25,7 +28,10 @@ jobs:
 
       - name: Build the wheels
         env:
-          CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014_x86_64
+          CIBW_SKIP: "pp*"
+          CIBW_BUILD_VERBOSITY: 1
+          CIBW_MANYLINUX_X86_64_IMAGE: "quay.io/pypa/manylinux2014_x86_64"
+          CIBW_ARCHS_LINUX: "x86_64"
         run: |
           cibuildwheel --output-dir dist
 
