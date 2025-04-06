@@ -1,7 +1,3 @@
 [submodule "imacpp"]
 	path = imacpp
 	url = https://github.com/efraimdahl/imacpp
-[submodule "extern/pybind11"]
-	path = extern/pybind11
-	url = ../../pybind/pybind11
-	branch = stable
