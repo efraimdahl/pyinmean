@@ -1,11 +1,11 @@
-Metadata-Version: 2.4
+Metadata-Version: 2.2
 Name: pyinmean
 Version: 0.1.0
 Summary: Python bindings for IMA rhythm analysis
 Author: Efraim Dahl, Peter van Kranenburg
 Author-email: Efraim Dahl <efraimcdahl@gmail.com>
 Maintainer-email: Efraim Dahl <efraimcdahl@gmail.com>
-License-Expression: GPL-3.0-or-later
+License: GNU General Public License v3.0
 Project-URL: Homepage, https://github.com/efraimdahl/pyinmean
 Project-URL: Repository, https://github.com/efraimdahl/pyinmean
 Project-URL: Issues, https://github.com/efraimdahl/pyinmean/issues
@@ -14,7 +14,6 @@ Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Dynamic: author
-Dynamic: license-file
 
 # pyima
 Python wrapper for c++ implementation of inner metric weight analysis for symbolic music.

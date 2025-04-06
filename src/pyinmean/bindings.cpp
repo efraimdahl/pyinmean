@@ -1,10 +1,10 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>  // for std::vector support
-#include "imacpp/onsets2ima.cpp"  // or a header file if available
+#include "../../imacpp/onsets2ima.cpp"  // or a header file if available
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(pyima, m) {
+PYBIND11_MODULE(pyinmean, m) {
     m.def("get_normalized_ima", &getNormalizedIMA,
           py::arg("onsets"), py::arg("spectral") = false,
           R"pbdoc(
