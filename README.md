@@ -8,8 +8,6 @@ C++ library to perform Inner Metric Analysis [1] on a series on onsets. By Peter
 # Usage
 
 ```python
-import sys
-import os
 import pyinmean
 
 
