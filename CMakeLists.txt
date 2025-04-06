@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.14)
-project(pyima)
+project(pyinmean)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Add pybind11 as a subdirectory (or however you've included it)
-add_subdirectory(pybind11)
+add_subdirectory(extern/pybind11)
 
 # Add imacpp source files
 set(IMACPP_SOURCES
@@ -12,18 +11,15 @@ set(IMACPP_SOURCES
     imacpp/MetroWeights_Mazzola.cpp
     imacpp/Metrum.cpp
     imacpp/OnsetGroup_Memory.cpp
-    imacpp/imacpp.cpp  # Add other necessary files if any
+    imacpp/imacpp.cpp
 )
 
-# Create the static library for imacpp
+# Create the static library and enable PIC
 add_library(imacpp STATIC ${IMACPP_SOURCES})
-# Explicitly set position independent code for imacpp
 set_target_properties(imacpp PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
-# Include imacpp headers
 include_directories(imacpp)
 
-# Create the Python module and link imacpp
-pybind11_add_module(pyima bindings.cpp)
-target_link_libraries(pyima PRIVATE imacpp)
-
+# Build the Python module
+pybind11_add_module(pyinmean bindings.cpp)
+target_link_libraries(pyinmean PRIVATE imacpp)

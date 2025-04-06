@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pyinmean.egg-info/PKG-INFO
+src/pyinmean.egg-info/SOURCES.txt
+src/pyinmean.egg-info/dependency_links.txt
+src/pyinmean.egg-info/not-zip-safe
+src/pyinmean.egg-info/top_level.txt
+tests/test.py
