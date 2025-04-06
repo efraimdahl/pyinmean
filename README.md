@@ -1,4 +1,5 @@
-# pyima
+# pyinmean
+Python - **In**er**Me**tric**An**alysis
 Python wrapper for c++ implementation of inner metric weight analysis for symbolic music.
 
 Based on [imacpp](https://github.com/pvankranenburg/imacpp/tree/master) a
