@@ -6,7 +6,7 @@
   <img alt="PyPI - Wheel" src="https://img.shields.io/pypi/wheel/pyinmean">
 </p>
 
-Python - **In**er**Me**tric**An**alysis
+Python - **In**ner**Me**tric**An**alysis
 Python wrapper for c++ implementation of inner metric weight analysis for symbolic music.
 
 Based on [imacpp](https://github.com/pvankranenburg/imacpp/tree/master) a
